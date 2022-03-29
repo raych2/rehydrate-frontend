@@ -4,7 +4,7 @@ import About from './components/About';
 import Tips from './components/Tips';
 import Stats from './components/Stats';
 import Quiz from './components/Quiz';
-import './App.css';
+import './styles/main.scss';
 
 const App = () => {
   return (
