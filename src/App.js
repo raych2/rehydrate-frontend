@@ -9,7 +9,6 @@ import './styles/main.scss';
 const App = () => {
   return (
     <div className="App">
-      <h1>Rehydrate</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
