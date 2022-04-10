@@ -1,0 +1,82 @@
+@use 'variables' as var;
+
+.topicSection {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+.rectangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 10px;
+  background-color: var.$color-secondary-background;
+  border: 1px solid var.$color-secondary-background;
+  border-radius: 30px;
+  width: 20vw;
+  height: 10vh;
+  font-family: var.$font-secondary;
+  font-size: 3rem;
+  color: var.$color-secondary-text;
+}
+#corp {
+  width: 24vw;
+}
+#why {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+  justify-content: center;
+  align-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.imgSection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 5px 0 10px 0;
+}
+.mainHeader {
+  display: flex;
+  flex-flow: row wrap;
+  font-family: var.$font-secondary;
+  font-size: 3rem;
+  margin: 50px auto 20px auto;
+}
+.smallImg {
+  height: 50%;
+  width: auto;
+}
+.infoContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-family: var.$font-primary;
+  width: 70%;
+  margin-bottom: 10px;
+}
+.textSection {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  font-family: var.$font-primary;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.subHeader {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.subText {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
