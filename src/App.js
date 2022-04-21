@@ -1,4 +1,5 @@
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import Tips from './components/Tips';
@@ -9,6 +10,9 @@ import './styles/main.scss';
 const App = () => {
   return (
     <div className="App">
+      <header>
+        <Nav />
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
