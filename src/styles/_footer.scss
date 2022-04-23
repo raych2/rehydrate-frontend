@@ -1,0 +1,18 @@
+@use 'variables' as var;
+
+footer {
+  margin-top: 100px;
+  padding: 50px;
+  width: 100%;
+  background-color: var.$color-primary-text;
+  color: var.$color-secondary-text;
+  text-align: center;
+  font-family: var.$font-primary;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.footerLink {
+  color: var.$color-secondary-text;
+  margin-left: 5px;
+}
