@@ -13,3 +13,7 @@ body {
   background-color: var.$color-primary-background;
   color: var.$color-primary-text;
 }
+
+main {
+  min-height: 100vh;
+}

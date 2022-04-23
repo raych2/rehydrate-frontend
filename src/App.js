@@ -14,13 +14,15 @@ const App = () => {
       <header>
         <Nav />
       </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="tips" element={<Tips />} />
-        <Route path="stats" element={<Stats />} />
-        <Route path="quiz" element={<Quiz />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="tips" element={<Tips />} />
+          <Route path="stats" element={<Stats />} />
+          <Route path="quiz" element={<Quiz />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
