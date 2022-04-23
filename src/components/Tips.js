@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Tips = () => {
   return (
     <>
@@ -6,7 +8,9 @@ const Tips = () => {
           How to Save <div className="rectangle">Water</div>?
         </div>
         <div className="infoContainer">
-          <div className="subHeader">Take a quiz</div>
+          <Link to="/quiz" className="subHeader quizLink">
+            Take a quiz
+          </Link>
           <div className="subText">
             Test your knowledge on our website and record your score!
           </div>
