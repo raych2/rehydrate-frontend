@@ -5,6 +5,7 @@ import About from './components/About';
 import Tips from './components/Tips';
 import Stats from './components/Stats';
 import Quiz from './components/Quiz';
+import Footer from './components/Footer';
 import './styles/main.scss';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="stats" element={<Stats />} />
         <Route path="quiz" element={<Quiz />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
