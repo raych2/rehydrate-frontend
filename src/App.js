@@ -7,6 +7,7 @@ import Stats from './components/Stats';
 import Quiz from './components/Quiz';
 import Footer from './components/Footer';
 import './styles/main.scss';
+import RestoreScroll from './components/RestoreScroll';
 
 const App = () => {
   return (
@@ -15,13 +16,15 @@ const App = () => {
         <Nav />
       </header>
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="tips" element={<Tips />} />
-          <Route path="stats" element={<Stats />} />
-          <Route path="quiz" element={<Quiz />} />
-        </Routes>
+        <RestoreScroll>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="tips" element={<Tips />} />
+            <Route path="stats" element={<Stats />} />
+            <Route path="quiz" element={<Quiz />} />
+          </Routes>
+        </RestoreScroll>
       </main>
       <Footer />
     </div>
