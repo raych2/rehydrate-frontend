@@ -1,0 +1,25 @@
+@use 'variables' as var;
+
+#quiz {
+  width: 10vw;
+}
+h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+.answerContainer {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 20px;
+  align-content: center;
+}
+.answer {
+  margin-bottom: 5px;
+  border-color: var.$color-secondary-background;
+  background-color: var.$color-secondary-text;
+  color: var.$color-secondary-background;
+}
+.answer:hover {
+  background-color: var.$color-secondary-background;
+  color: var.$color-secondary-text;
+}
