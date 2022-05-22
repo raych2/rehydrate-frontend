@@ -12,6 +12,9 @@ const Quiz = () => {
   const [loadingMessage, setLoadingMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
+  const parseEntities = (text) =>
+    new DOMParser().parseFromString(text, 'text/html').body.innerText;
+
   useEffect(() => {
     async function getQuizQuestions() {
       try {
@@ -82,7 +85,8 @@ const Quiz = () => {
                     return (
                       <div key={question._id}>
                         <h3>
-                          {currentQuestionNumber + 1}. {question.questionText}
+                          {currentQuestionNumber + 1}.{' '}
+                          {parseEntities(question.questionText)}
                         </h3>
                         <div className="answerContainer">
                           {question.answerOptions.map((answer) => {
@@ -104,12 +108,14 @@ const Quiz = () => {
                                 }}
                                 onClick={() => handleClick(answer)}
                               >
-                                {answer.answerText}
+                                {parseEntities(answer.answerText)}
                               </button>
                             );
                           })}
                         </div>
-                        {moreInfo && <p>More info: {question.infoUrl}</p>}
+                        {moreInfo && (
+                          <p>More info: {parseEntities(question.infoUrl)}</p>
+                        )}
                       </div>
                     );
                   })}
