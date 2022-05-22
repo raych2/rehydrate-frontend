@@ -114,7 +114,17 @@ const Quiz = () => {
                           })}
                         </div>
                         {moreInfo && (
-                          <p>More info: {parseEntities(question.infoUrl)}</p>
+                          <p className="info">
+                            More info:{' '}
+                            <a
+                              href={parseEntities(question.infoUrl)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="infoLink"
+                            >
+                              {parseEntities(question.infoUrl)}
+                            </a>
+                          </p>
                         )}
                       </div>
                     );

@@ -27,3 +27,18 @@ h2 {
   background-color: var.$color-secondary-text;
   color: var.$color-secondary-background;
 }
+.info {
+  margin: 10px 0;
+}
+.info a {
+  &:focus,
+  &:hover,
+  &:link {
+    text-decoration-color: var.$color-secondary-background;
+    color: var.$color-primary-text;
+  }
+  &:visited,
+  &:active {
+    color: var.$color-secondary-background;
+  }
+}
