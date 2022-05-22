@@ -23,3 +23,7 @@ h2 {
   background-color: var.$color-secondary-background;
   color: var.$color-secondary-text;
 }
+.answer:disabled {
+  background-color: var.$color-secondary-text;
+  color: var.$color-secondary-background;
+}
