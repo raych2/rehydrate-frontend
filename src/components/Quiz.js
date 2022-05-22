@@ -4,6 +4,7 @@ const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState('');
+  const [selected, setSelected] = useState('');
   const [disableButton, setDisableButton] = useState(false);
   const [moreInfo, setMoreInfo] = useState('');
   const [score, setScore] = useState(0);
@@ -30,12 +31,13 @@ const Quiz = () => {
     getQuizQuestions();
   }, []);
 
-  const handleClick = (isCorrect) => {
-    if (isCorrect) {
+  const handleClick = (answer) => {
+    setSelected(answer._id);
+    if (answer.isCorrect) {
       setScore(score + 1);
-      setCorrectAnswer(true);
+      setCorrectAnswer('#60D394');
     } else {
-      setCorrectAnswer(false);
+      setCorrectAnswer('#EE6055');
     }
     setDisableButton(true);
     setMoreInfo(true);
@@ -48,7 +50,6 @@ const Quiz = () => {
     if (nextQuestion < questions.length) {
       setCurrentQuestionNumber(nextQuestion);
     } else {
-      console.log('quiz end');
       setQuizEnd(true);
     }
   };
@@ -77,20 +78,31 @@ const Quiz = () => {
                     (question) =>
                       questions.indexOf(question) === currentQuestionNumber
                   )
-                  .map((question, index) => {
+                  .map((question) => {
                     return (
                       <div key={question._id}>
                         <h3>
                           {currentQuestionNumber + 1}. {question.questionText}
                         </h3>
                         <div className="answerContainer">
-                          {question.answerOptions.map((answer, index) => {
+                          {question.answerOptions.map((answer) => {
                             return (
                               <button
                                 key={answer._id}
                                 className="answer"
                                 disabled={disableButton}
-                                onClick={() => handleClick(answer.isCorrect)}
+                                style={{
+                                  backgroundColor:
+                                    answer._id === selected
+                                      ? correctAnswer
+                                      : '',
+                                  borderColor:
+                                    answer._id === selected
+                                      ? correctAnswer
+                                      : '',
+                                  color: answer._id === selected ? '#fff' : '',
+                                }}
+                                onClick={() => handleClick(answer)}
                               >
                                 {answer.answerText}
                               </button>
