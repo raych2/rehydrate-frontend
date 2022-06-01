@@ -1,11 +1,22 @@
 @use 'variables' as var;
 
+.quizSection {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  margin: 50px auto 20px auto;
+  text-align: center;
+}
 #quiz {
   width: 10vw;
 }
 h2 {
-  text-align: center;
   margin: 10px 0;
+}
+.questionContainer {
+  max-width: 90vw;
 }
 .answerContainer {
   display: flex;
@@ -18,27 +29,28 @@ h2 {
   border-color: var.$color-secondary-background;
   background-color: var.$color-secondary-text;
   color: var.$color-secondary-background;
-}
-.answer:hover {
-  background-color: var.$color-secondary-background;
-  color: var.$color-secondary-text;
-}
-.answer:disabled {
-  background-color: var.$color-secondary-text;
-  color: var.$color-secondary-background;
+  &:hover {
+    background-color: var.$color-secondary-background;
+    color: var.$color-secondary-text;
+  }
+  &:disabled {
+    background-color: var.$color-secondary-text;
+    color: var.$color-secondary-background;
+  }
 }
 .info {
   margin: 10px 0;
-}
-.info a {
-  &:focus,
-  &:hover,
-  &:link {
-    text-decoration-color: var.$color-secondary-background;
-    color: var.$color-primary-text;
-  }
-  &:visited,
-  &:active {
-    color: var.$color-secondary-background;
+  max-width: 90vw;
+  a {
+    &:focus,
+    &:hover,
+    &:link {
+      text-decoration-color: var.$color-secondary-background;
+      color: var.$color-primary-text;
+    }
+    &:visited,
+    &:active {
+      color: var.$color-secondary-background;
+    }
   }
 }

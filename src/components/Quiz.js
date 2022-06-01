@@ -60,7 +60,7 @@ const Quiz = () => {
   return (
     <>
       {errorMessage && <p>An error has occured</p>}
-      <div className="topicSection smallerTopicSection">
+      <div className="quizSection">
         <div className="mainHeader">
           <div className="rectangle" id="quiz">
             Quiz
@@ -69,11 +69,11 @@ const Quiz = () => {
         {loadingMessage ? (
           <h2>Loading ...</h2>
         ) : (
-          <div className="questionContainer">
+          <>
             {quizEnd ? (
               <h2>Quiz over. Your final score is {score}/5</h2>
             ) : (
-              <>
+              <div className="questionContainer">
                 <h2>Score: {score}/5</h2>
                 <h2 className="instructions">Please select the best answer.</h2>
                 {questions
@@ -132,9 +132,9 @@ const Quiz = () => {
                 <button className="next" onClick={handleNextQuestion}>
                   Next Question
                 </button>
-              </>
+              </div>
             )}
-          </div>
+          </>
         )}
       </div>
     </>
