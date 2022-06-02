@@ -6,8 +6,8 @@ const Home = () => {
     <div className="home">
       <h1 className="title">Rehydrate</h1>
       <img className="logo" alt="rehydrate logo" src={logo}></img>
-      <Link to="about">
-        <button type="button">Learn More!</button>
+      <Link to="about" className="learn">
+        Learn More!
       </Link>
     </div>
   );
