@@ -4,7 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Tips from './components/Tips';
 import Stats from './components/Stats';
-import Quiz from './components/Quiz';
+import Quiz from './components/Quiz/Quiz';
 import Footer from './components/Footer';
 import './styles/main.scss';
 import RestoreScroll from './components/RestoreScroll';

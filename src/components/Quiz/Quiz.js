@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import FinalMessage from './FinalMessage';
+import QuizHeader from './QuizHeader';
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -68,26 +70,13 @@ const Quiz = () => {
     <>
       {errorMessage && <p>An error has occured</p>}
       <div className="quizSection">
-        <div className="mainHeader">
-          <h1 className="rectangle" id="quiz">
-            Quiz
-          </h1>
-        </div>
+        <QuizHeader />
         {loadingMessage ? (
           <h2>Loading ...</h2>
         ) : (
           <>
             {quizEnd ? (
-              <>
-                <h2>
-                  Congratulations, you finished the quiz!
-                  <br />
-                  Your final score is {score}/5
-                </h2>
-                <button className="next" onClick={retakeQuiz}>
-                  Retake quiz
-                </button>
-              </>
+              <FinalMessage score={score} retakeQuiz={retakeQuiz} />
             ) : (
               <div className="questionContainer">
                 <h2>Score: {score}/5</h2>
