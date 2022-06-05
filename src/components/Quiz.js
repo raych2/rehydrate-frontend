@@ -57,21 +57,37 @@ const Quiz = () => {
     }
   };
 
+  const retakeQuiz = () => {
+    setCurrentQuestionNumber(0);
+    setSelected('');
+    setScore(0);
+    setQuizEnd(false);
+  };
+
   return (
     <>
       {errorMessage && <p>An error has occured</p>}
       <div className="quizSection">
         <div className="mainHeader">
-          <div className="rectangle" id="quiz">
+          <h1 className="rectangle" id="quiz">
             Quiz
-          </div>
+          </h1>
         </div>
         {loadingMessage ? (
           <h2>Loading ...</h2>
         ) : (
           <>
             {quizEnd ? (
-              <h2>Quiz over. Your final score is {score}/5</h2>
+              <>
+                <h2>
+                  Congratulations, you finished the quiz!
+                  <br />
+                  Your final score is {score}/5
+                </h2>
+                <button className="next" onClick={retakeQuiz}>
+                  Retake quiz
+                </button>
+              </>
             ) : (
               <div className="questionContainer">
                 <h2>Score: {score}/5</h2>
