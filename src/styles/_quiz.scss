@@ -44,6 +44,7 @@ button {
 .info {
   margin: 20px 0 10px 0;
   max-width: 90vw;
+  overflow-wrap: break-word;
   a {
     &:focus,
     &:hover,
@@ -59,4 +60,25 @@ button {
 }
 .next {
   margin-top: 30px;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .quizSection {
+    margin-top: 80px;
+  }
+  #quiz {
+    width: 20vw;
+    height: 8vh;
+  }
+  .next {
+    width: 30vw;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #quiz {
+    width: 40vw;
+    height: 10vh;
+  }
+  .answer {
+    width: 80vw;
+  }
 }
