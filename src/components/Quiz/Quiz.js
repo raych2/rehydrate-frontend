@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import FinalMessage from './FinalMessage';
 import QuizHeader from './QuizHeader';
+import Question from './Question';
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -13,9 +14,6 @@ const Quiz = () => {
   const [quizEnd, setQuizEnd] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
-
-  const parseEntities = (text) =>
-    new DOMParser().parseFromString(text, 'text/html').body.innerText;
 
   useEffect(() => {
     async function getQuizQuestions() {
@@ -78,66 +76,17 @@ const Quiz = () => {
             {quizEnd ? (
               <FinalMessage score={score} retakeQuiz={retakeQuiz} />
             ) : (
-              <div className="questionContainer">
-                <h2>Score: {score}/5</h2>
-                <h2 className="instructions">Please select the best answer.</h2>
-                {questions
-                  .filter(
-                    (question) =>
-                      questions.indexOf(question) === currentQuestionNumber
-                  )
-                  .map((question) => {
-                    return (
-                      <div key={question._id}>
-                        <h3>
-                          {currentQuestionNumber + 1}.{' '}
-                          {parseEntities(question.questionText)}
-                        </h3>
-                        <div className="answerContainer">
-                          {question.answerOptions.map((answer) => {
-                            return (
-                              <button
-                                key={answer._id}
-                                className="answer"
-                                disabled={disableButton}
-                                style={{
-                                  backgroundColor:
-                                    answer._id === selected
-                                      ? correctAnswer
-                                      : '',
-                                  borderColor:
-                                    answer._id === selected
-                                      ? correctAnswer
-                                      : '',
-                                  color: answer._id === selected ? '#fff' : '',
-                                }}
-                                onClick={() => handleClick(answer)}
-                              >
-                                {parseEntities(answer.answerText)}
-                              </button>
-                            );
-                          })}
-                        </div>
-                        {moreInfo && (
-                          <p className="info">
-                            More info:{' '}
-                            <a
-                              href={parseEntities(question.infoUrl)}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="infoLink"
-                            >
-                              {parseEntities(question.infoUrl)}
-                            </a>
-                          </p>
-                        )}
-                      </div>
-                    );
-                  })}
-                <button className="next" onClick={handleNextQuestion}>
-                  Next Question
-                </button>
-              </div>
+              <Question
+                score={score}
+                questions={questions}
+                currentQuestionNumber={currentQuestionNumber}
+                selected={selected}
+                correctAnswer={correctAnswer}
+                disableButton={disableButton}
+                moreInfo={moreInfo}
+                handleClick={handleClick}
+                handleNextQuestion={handleNextQuestion}
+              />
             )}
           </>
         )}
