@@ -1,3 +1,5 @@
+import InfoLink from './InfoLink';
+
 const Question = ({
   score,
   questions,
@@ -49,17 +51,7 @@ const Question = ({
                 })}
               </div>
               {moreInfo && (
-                <p className="info">
-                  More info:{' '}
-                  <a
-                    href={parseEntities(question.infoUrl)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="infoLink"
-                  >
-                    {parseEntities(question.infoUrl)}
-                  </a>
-                </p>
+                <InfoLink question={question} parseEntities={parseEntities} />
               )}
             </div>
           );
