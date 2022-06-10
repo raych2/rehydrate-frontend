@@ -46,3 +46,82 @@ nav {
   text-decoration: none;
   color: var.$color-secondary-text;
 }
+
+.menu {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 20;
+  display: none;
+}
+
+.menu div {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+  background-color: var.$color-secondary-background;
+  &:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  &:nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+.close div {
+  background-color: var.$color-secondary-text;
+  &:nth-child(1) {
+    transform: rotate(0);
+  }
+  &:nth-child(2) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  &:nth-child(3) {
+    transform: rotate(0);
+  }
+}
+
+.navlinkContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li {
+    list-style-type: none;
+    padding: 1rem;
+    &:hover {
+      color: var.$color-secondary-text;
+      background-color: var.$color-secondary-background;
+    }
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+  .navlinkContainer {
+    flex-flow: column nowrap;
+    background-color: var.$color-primary-background;
+    position: fixed;
+    top: 3.5rem;
+    right: 0;
+    height: 15vh;
+    width: 100vw;
+    margin-top: 12px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+  }
+  .active {
+    transform: translateX(100%);
+  }
+}
