@@ -34,7 +34,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 15vw;
+  width: 20vw;
   list-style-type: none;
 }
 
@@ -101,6 +101,11 @@ nav {
       color: var.$color-secondary-text;
       background-color: var.$color-secondary-background;
     }
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .navlinkContainer {
+    min-width: 40vw;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

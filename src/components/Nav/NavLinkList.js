@@ -15,6 +15,9 @@ const NavLinkList = ({ open, setOpen }) => {
       <Link to="stats" className="navlink">
         Stats
       </Link>
+      <Link to="quiz" className="navlink">
+        Quiz
+      </Link>
     </ul>
   );
 };
