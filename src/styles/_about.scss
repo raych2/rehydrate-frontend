@@ -80,3 +80,66 @@
   font-weight: 300;
   margin-bottom: 10px;
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .topicSection {
+    margin-top: 80px;
+    width: 90vw;
+  }
+  .rectangle {
+    width: 36vw;
+    height: 50%;
+  }
+  #corp {
+    width: 44vw;
+  }
+  .infoContainer {
+    width: 100%;
+  }
+  .imgSection {
+    width: 90vw;
+  }
+  .textSection {
+    width: 72vw;
+  }
+  .smallImg {
+    max-height: 10vh;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .topicSection {
+    width: 90vw;
+  }
+  .rectangle {
+    width: 54vw;
+    height: auto;
+    margin: 0 5px 0 5px;
+    font-size: 2rem;
+  }
+  #corp {
+    width: 62vw;
+  }
+  .mainHeader {
+    height: auto;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .infoContainer {
+    width: 100%;
+  }
+  .imgSection {
+    width: 90vw;
+    display: block;
+  }
+  .textSection {
+    width: 90vw;
+  }
+  .smallImg {
+    max-height: 10vh;
+  }
+  .subHeader {
+    font-size: 1.5rem;
+  }
+  .subText {
+    font-size: 1rem;
+  }
+}

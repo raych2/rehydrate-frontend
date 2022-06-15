@@ -4,7 +4,28 @@
   width: 60%;
 }
 
+.shorterTitle {
+  width: 32vw;
+}
 .quizLink {
   text-decoration: none;
   color: var.$color-primary-text;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .smallerTopicSection {
+    width: 80vw;
+  }
+  .shorterTitle {
+    width: 24vw;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .smallerTopicSection {
+    width: 98vw;
+  }
+  .infoContainer {
+    max-width: 90vw;
+  }
 }

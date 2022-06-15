@@ -5,7 +5,7 @@ const Tips = () => {
     <>
       <div className="topicSection smallerTopicSection">
         <div className="mainHeader">
-          How to Save <div className="rectangle">Water</div>?
+          How to Save <div className="rectangle shorterTitle">Water</div>?
         </div>
         <div className="infoContainer">
           <Link to="/quiz" className="subHeader quizLink">

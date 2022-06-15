@@ -3,7 +3,7 @@ const Stats = () => {
     <>
       <div className="topicSection smallerTopicSection">
         <div className="mainHeader">
-          How to Access <div className="rectangle">Stats</div>?
+          How to Access <div className="rectangle shorterTitle">Stats</div>?
         </div>
         <div className="infoContainer">
           <div className="subHeader">Annual Reports</div>

@@ -36,6 +36,9 @@ button {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .learn {
+    width: 30vw;
+  }
   button {
     width: 50vw;
   }
@@ -44,6 +47,7 @@ button {
   .title {
     font-size: 3em;
   }
+  .learn,
   button {
     width: 50vw;
   }
