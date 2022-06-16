@@ -66,7 +66,7 @@ button {
     margin-top: 80px;
   }
   #quiz {
-    width: 20vw;
+    min-width: 20vw;
   }
   .next {
     width: 30vw;
@@ -74,7 +74,7 @@ button {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #quiz {
-    width: 32vw;
+    min-width: 32vw;
   }
   .answer {
     width: 80vw;
