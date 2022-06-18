@@ -10,7 +10,7 @@ nav {
   position: fixed;
   top: 0;
   margin: 0 0.5rem 0.5rem 0.5rem;
-  color: var.$color-secondary-text;
+  color: var.$color-primary-text;
   font-family: var.$font-secondary;
 }
 
@@ -44,7 +44,7 @@ nav {
 .navlink:link,
 .navlink:active {
   text-decoration: none;
-  color: var.$color-secondary-text;
+  color: var.$color-primary-text;
 }
 
 .menu {
@@ -77,7 +77,7 @@ nav {
 }
 
 .close div {
-  background-color: var.$color-secondary-text;
+  background-color: var.$color-primary-text;
   &:nth-child(1) {
     transform: rotate(0);
   }
@@ -98,7 +98,7 @@ nav {
     list-style-type: none;
     padding: 1rem;
     &:hover {
-      color: var.$color-secondary-text;
+      color: var.$color-primary-text;
       background-color: var.$color-secondary-background;
     }
   }
