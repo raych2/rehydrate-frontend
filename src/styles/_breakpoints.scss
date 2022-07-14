@@ -1,0 +1,11 @@
+//480px, 1024px
+$breakpoints: (
+  'small': 30em,
+  'large': 64em,
+);
+
+@mixin breakpoint($size) {
+  @media only screen and (max-device-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
