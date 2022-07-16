@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use 'breakpoints' as b;
 
 .quizSection {
   display: flex;
@@ -8,25 +9,40 @@
   align-items: center;
   margin: 50px auto 20px auto;
   text-align: center;
+  @include b.breakpoint(large) {
+    margin-top: 80px;
+  }
 }
+
 #quiz {
   width: 10vw;
+  @include b.breakpoint(large) {
+    min-width: 20vw;
+  }
+  @include b.breakpoint(small) {
+    min-width: 32vw;
+  }
 }
+
 h2 {
   margin: 10px 0;
 }
+
 .questionContainer {
   max-width: 90vw;
 }
+
 .answerContainer {
   display: flex;
   flex-flow: column wrap;
   margin-top: 20px;
   align-content: center;
 }
+
 button {
   cursor: pointer;
 }
+
 .answer {
   margin-bottom: 5px;
   border-color: var.$color-secondary-background;
@@ -40,7 +56,11 @@ button {
     background-color: var.$color-secondary-text;
     color: var.$color-secondary-background;
   }
+  @include b.breakpoint(small) {
+    width: 80vw;
+  }
 }
+
 .info {
   margin: 20px 0 10px 0;
   max-width: 90vw;
@@ -58,25 +78,13 @@ button {
     }
   }
 }
+
 .next {
   margin-top: 30px;
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .quizSection {
-    margin-top: 80px;
-  }
-  #quiz {
-    min-width: 20vw;
-  }
-  .next {
+  @include b.breakpoint(large) {
     width: 30vw;
   }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  #quiz {
-    min-width: 32vw;
-  }
-  .answer {
-    width: 80vw;
+  @include b.breakpoint(small) {
+    width: 50vw;
   }
 }
