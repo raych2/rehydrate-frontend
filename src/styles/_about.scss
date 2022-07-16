@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use 'breakpoints' as b;
 
 .topicSection {
   display: flex;
@@ -8,6 +9,10 @@
   align-content: space-around;
   align-items: center;
   margin: 50px auto 20px auto;
+  @include b.breakpoint(large) {
+    margin-top: 80px;
+    width: 90vw;
+  }
 }
 .rectangle {
   display: flex;
@@ -22,9 +27,28 @@
   font-family: var.$font-secondary;
   font-size: 3rem;
   color: var.$color-secondary-text;
+  @include b.breakpoint(large) {
+    width: 36vw;
+    height: 50%;
+  }
+  @include b.breakpoint(small) {
+    width: 54vw;
+    height: auto;
+    margin: 0 5px 0 5px;
+    font-size: 2rem;
+  }
+}
+#corporation {
+  margin-top: 0;
 }
 #corp {
   width: 24vw;
+  @include b.breakpoint(large) {
+    width: 44vw;
+  }
+  @include b.breakpoint(small) {
+    width: 62vw;
+  }
 }
 #why {
   display: flex;
@@ -33,7 +57,7 @@
   justify-content: center;
   align-content: space-evenly;
   align-items: center;
-  margin: auto;
+  margin-top: 0;
 }
 .imgSection {
   display: flex;
@@ -42,6 +66,12 @@
   align-items: center;
   width: 70%;
   margin: 5px 0 10px 0;
+  @include b.breakpoint(large) {
+    width: 90vw;
+  }
+  @include b.breakpoint(small) {
+    display: block;
+  }
 }
 .mainHeader {
   display: flex;
@@ -49,10 +79,18 @@
   font-family: var.$font-secondary;
   font-size: 3rem;
   margin: 50px auto 20px auto;
+  @include b.breakpoint(small) {
+    height: auto;
+    text-align: center;
+    font-size: 2rem;
+  }
 }
 .smallImg {
   height: 50%;
   width: auto;
+  @include b.breakpoint(large) {
+    max-height: 10vh;
+  }
 }
 .infoContainer {
   display: flex;
@@ -61,6 +99,9 @@
   font-family: var.$font-primary;
   width: 70%;
   margin-bottom: 10px;
+  @include b.breakpoint(large) {
+    width: 100%;
+  }
 }
 .textSection {
   display: flex;
@@ -69,77 +110,26 @@
   font-family: var.$font-primary;
   width: 50%;
   margin-bottom: 10px;
+  @include b.breakpoint(large) {
+    width: 72vw;
+  }
+  @include b.breakpoint(small) {
+    width: 90vw;
+  }
 }
 .subHeader {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 10px;
+  @include b.breakpoint(small) {
+    font-size: 1.5rem;
+  }
 }
 .subText {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 10px;
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .topicSection {
-    margin-top: 80px;
-    width: 90vw;
-  }
-  .rectangle {
-    width: 36vw;
-    height: 50%;
-  }
-  #corp {
-    width: 44vw;
-  }
-  .infoContainer {
-    width: 100%;
-  }
-  .imgSection {
-    width: 90vw;
-  }
-  .textSection {
-    width: 72vw;
-  }
-  .smallImg {
-    max-height: 10vh;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .topicSection {
-    width: 90vw;
-  }
-  .rectangle {
-    width: 54vw;
-    height: auto;
-    margin: 0 5px 0 5px;
-    font-size: 2rem;
-  }
-  #corp {
-    width: 62vw;
-  }
-  .mainHeader {
-    height: auto;
-    text-align: center;
-    font-size: 2rem;
-  }
-  .infoContainer {
-    width: 100%;
-  }
-  .imgSection {
-    width: 90vw;
-    display: block;
-  }
-  .textSection {
-    width: 90vw;
-  }
-  .smallImg {
-    max-height: 10vh;
-  }
-  .subHeader {
-    font-size: 1.5rem;
-  }
-  .subText {
+  @include b.breakpoint(small) {
     font-size: 1rem;
   }
 }

@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="topicSection">
+      <div className="topicSection" id="corporation">
         <div className="mainHeader">
           Why
           <div className="rectangle" id="corp">
