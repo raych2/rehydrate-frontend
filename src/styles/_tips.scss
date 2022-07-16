@@ -1,33 +1,31 @@
 @use 'variables' as var;
+@use 'breakpoints' as b;
 
 .smallerTopicSection {
   width: 60%;
+  @include b.breakpoint(large) {
+    width: 80vw;
+  }
+  @include b.breakpoint(small) {
+    width: 98vw;
+  }
 }
 
 .shorterTitle {
   max-width: 12vw;
+  @include b.breakpoint(large) {
+    max-width: 24vw;
+  }
+  @include b.breakpoint(small) {
+    max-width: 32vw;
+  }
 }
 .quizLink {
   text-decoration: none;
   color: var.$color-primary-text;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .smallerTopicSection {
-    width: 80vw;
-  }
-  .shorterTitle {
-    max-width: 24vw;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .smallerTopicSection {
-    width: 98vw;
-  }
-  .shorterTitle {
-    max-width: 32vw;
-  }
+@include b.breakpoint(small) {
   .infoContainer {
     max-width: 90vw;
   }
