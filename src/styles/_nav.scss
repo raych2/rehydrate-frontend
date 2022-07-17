@@ -95,6 +95,9 @@ nav {
   width: 20vw;
   margin: 0;
   padding: 0;
+  li {
+    list-style-type: none;
+  }
   &.active {
     @include b.breakpoint(small) {
       transform: translateX(100%);

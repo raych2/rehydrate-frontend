@@ -6,18 +6,26 @@ const NavLinkList = ({ open, setOpen }) => {
       className={open ? 'navlinkContainer' : 'navlinkContainer active'}
       onClick={() => setOpen(!open)}
     >
-      <Link to="about" className="navlink">
-        About
-      </Link>
-      <Link to="tips" className="navlink">
-        Tips
-      </Link>
-      <Link to="stats" className="navlink">
-        Stats
-      </Link>
-      <Link to="quiz" className="navlink">
-        Quiz
-      </Link>
+      <li>
+        <Link to="about" className="navlink">
+          About
+        </Link>
+      </li>
+      <li>
+        <Link to="tips" className="navlink">
+          Tips
+        </Link>
+      </li>
+      <li>
+        <Link to="stats" className="navlink">
+          Stats
+        </Link>
+      </li>
+      <li>
+        <Link to="quiz" className="navlink">
+          Quiz
+        </Link>
+      </li>
     </ul>
   );
 };
