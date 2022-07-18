@@ -70,7 +70,8 @@
     width: 90vw;
   }
   @include b.breakpoint(small) {
-    display: block;
+    display: flex;
+    text-align: center;
   }
 }
 .mainHeader {
@@ -80,6 +81,8 @@
   font-size: 3rem;
   margin: 50px auto 20px auto;
   @include b.breakpoint(small) {
+    max-width: 70vw;
+    justify-content: center;
     height: auto;
     text-align: center;
     font-size: 2rem;
