@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <h1
+      class="title"
+    >
+      Rehydrate
+    </h1>
+    <img
+      alt="rehydrate logo"
+      class="logo"
+      src="Rehydrate_Final_white_small2.png"
+    />
+    <a
+      class="learn"
+      href="/about"
+    >
+      Learn More!
+    </a>
+  </div>
+</div>
+`;
