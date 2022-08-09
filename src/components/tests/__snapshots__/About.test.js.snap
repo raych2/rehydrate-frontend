@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component renders correctly 1`] = `
+<div>
+  <div
+    class="topicSection"
+  >
+    <div
+      class="mainHeader"
+    >
+      What's 
+      <div
+        class="rectangle"
+      >
+        Rehydrate
+      </div>
+      ?
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Purpose
+      </div>
+      <div
+        class="subText"
+      >
+        Most and more areas and its communities are being affected by drought and heatwaves.
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Why are we losing water?
+      </div>
+      <div
+        class="subText"
+      >
+        People might not know this, but it takes gallons of water to produce items and run operations.
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Initiative
+      </div>
+      <div
+        class="subText"
+      >
+        Corporations are running high water usage without plans to deal with drought and heatwaves. With education, there are many actions to take.
+      </div>
+    </div>
+  </div>
+  <div
+    class="topicSection"
+    id="corporation"
+  >
+    <div
+      class="mainHeader"
+    >
+      Why
+      <div
+        class="rectangle"
+        id="corp"
+      >
+        Corporations
+      </div>
+      ?
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Accountability
+      </div>
+      <div
+        class="subText"
+      >
+        Corporations are running high water usage without plans to deal with drought and heatwaves, but they have little to no plans on dealing with the issues and the communities.
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Advocate
+      </div>
+      <div
+        class="subText"
+      >
+        Share your research from their water usage and protest to the corporate or company to implement better environmental policies and practices.
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Alternatives
+      </div>
+      <div
+        class="subText"
+      >
+        Support alternative and small businesses that practice water conservation (such as recycling water, etc) and work on charitable actions related to drought and heatwaves. Supporting local businesses improves your community too!
+      </div>
+    </div>
+  </div>
+  <div
+    class="topicSection"
+    id="why"
+  >
+    <div
+      class="mainHeader"
+    >
+      Why 
+      <div
+        class="rectangle"
+      >
+        Rehydrate
+      </div>
+      ?
+    </div>
+    <div
+      class="imgSection"
+    >
+      <img
+        alt="water drop"
+        class="smallImg"
+        src="Water_Drop_Small.png"
+      />
+      <div
+        class="textSection"
+      >
+        <div
+          class="subHeader"
+        >
+          Save Water
+        </div>
+        <div
+          class="subText"
+        >
+          Educate and keep corporations accountable for water conservation through initiatives to prevent drought and heatwaves, as well as provide resources in crises.
+        </div>
+      </div>
+    </div>
+    <div
+      class="imgSection"
+    >
+      <img
+        alt="stats"
+        class="smallImg"
+        src="Stats_small.png"
+      />
+      <div
+        class="textSection"
+      >
+        <div
+          class="subHeader"
+        >
+          See Stats
+        </div>
+        <div
+          class="subText"
+        >
+          Corporations publish annual reports which include water usage of their headquarters and suppliers.
+        </div>
+      </div>
+    </div>
+    <div
+      class="imgSection"
+    >
+      <img
+        alt="shopping cart"
+        class="smallImg"
+        src="shopping_cart_small.png"
+      />
+      <div
+        class="textSection"
+      >
+        <div
+          class="subHeader"
+        >
+          Shop Blue
+        </div>
+        <div
+          class="subText"
+        >
+          Support stores that are conserving water and creating community initiatives dealing with drought and heatwaves.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
