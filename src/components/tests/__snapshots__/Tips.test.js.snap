@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tips component renders correctly 1`] = `
+<div>
+  <div
+    class="topicSection smallerTopicSection"
+  >
+    <div
+      class="mainHeader"
+    >
+      How to Save 
+      <div
+        class="rectangle shorterTitle"
+      >
+        Water
+      </div>
+      ?
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <a
+        class="subHeader quizLink"
+        href="/quiz"
+      >
+        Take a quiz
+      </a>
+      <div
+        class="subText"
+      >
+        Test your knowledge on our website and record your score!
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Read
+      </div>
+      <div
+        class="subText"
+      >
+        Rehydrate holds infographics updated with our research on saving water and related topics.
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Share
+      </div>
+      <div
+        class="subText"
+      >
+        Our infographics and your quiz score are shareable to social media. Teach your peers what they can do to "Rehydrate!"
+      </div>
+    </div>
+  </div>
+</div>
+`;
