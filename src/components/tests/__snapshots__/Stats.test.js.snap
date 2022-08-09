@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stats component renders correctly 1`] = `
+<div>
+  <div
+    class="topicSection smallerTopicSection"
+  >
+    <div
+      class="mainHeader"
+    >
+      How to Access 
+      <div
+        class="rectangle shorterTitle"
+      >
+        Stats
+      </div>
+      ?
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Annual Reports
+      </div>
+      <div
+        class="subText"
+      >
+        Corporations are obligations to publish annual reports. Because of the climate crisis and the rising trend of "sustainability," the reports have increasingly included environmental policies, practices, and charities.
+      </div>
+    </div>
+    <div
+      class="infoContainer"
+    >
+      <div
+        class="subHeader"
+      >
+        Sustainable Practices
+      </div>
+      <div
+        class="subText"
+      >
+        Corporations have published non-financial reports to state their environmental and social performances. If some companies do not have these, then we will dig into their financial reports on water usage tied to the workplace and suppliers.
+      </div>
+      <div
+        class="subText"
+      >
+        Here are some key words: "community service", "social impact", "water management", "water usage"
+      </div>
+    </div>
+  </div>
+</div>
+`;
