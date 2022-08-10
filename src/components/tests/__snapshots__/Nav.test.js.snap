@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component renders correctly 1`] = `
+<div>
+  <nav>
+    <a
+      class="logoContainer navlink"
+      href="/"
+    >
+      <img
+        alt="rehydrate logo"
+        class="navLogo"
+        src="Rehydrate_Final_white_small2.png"
+      />
+      <div>
+        Rehydrate
+      </div>
+    </a>
+    <div
+      class="menu close"
+    >
+      <div />
+      <div />
+      <div />
+    </div>
+    <ul
+      class="navlinkContainer active"
+    >
+      <li>
+        <a
+          class="navlink"
+          href="/about"
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          class="navlink"
+          href="/tips"
+        >
+          Tips
+        </a>
+      </li>
+      <li>
+        <a
+          class="navlink"
+          href="/stats"
+        >
+          Stats
+        </a>
+      </li>
+      <li>
+        <a
+          class="navlink"
+          href="/quiz"
+        >
+          Quiz
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
