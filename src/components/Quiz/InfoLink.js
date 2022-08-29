@@ -1,14 +1,18 @@
-const InfoLink = ({ question, parseEntities }) => {
+const InfoLink = ({ question }) => {
+  const parseEntities = (text) =>
+    new DOMParser().parseFromString(text, 'text/html').body.innerText;
+  const parsedUrl = parseEntities(question.infoUrl);
+
   return (
     <p className="info">
       More info:{' '}
       <a
-        href={parseEntities(question.infoUrl)}
+        href={parsedUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="infoLink"
       >
-        {parseEntities(question.infoUrl)}
+        {parsedUrl}
       </a>
     </p>
   );
