@@ -11,26 +11,20 @@ const Question = ({
   handleClick,
   handleNextQuestion,
 }) => {
-  const parseEntities = (text) =>
-    new DOMParser().parseFromString(text, 'text/html').body.innerText;
-
   return (
     <div className="questionContainer">
       <h2>Score: {score}/5</h2>
       <h2 className="instructions">Please select the best answer.</h2>
       {questions
-        .filter(
-          (question) => questions.indexOf(question) === currentQuestionNumber
-        )
-        .map((question) => {
+        .filter((question, index) => index === currentQuestionNumber)
+        .map((currentQuestion) => {
           return (
-            <div key={question._id}>
+            <div key={currentQuestion._id}>
               <h3>
-                {currentQuestionNumber + 1}.{' '}
-                {parseEntities(question.questionText)}
+                {currentQuestionNumber + 1}. {currentQuestion.questionText}
               </h3>
               <div className="answerContainer">
-                {question.answerOptions.map((answer) => {
+                {currentQuestion.answerOptions.map((answer, index) => {
                   return (
                     <button
                       key={answer._id}
@@ -45,14 +39,12 @@ const Question = ({
                       }}
                       onClick={() => handleClick(answer)}
                     >
-                      {parseEntities(answer.answerText)}
+                      {answer.answerText}
                     </button>
                   );
                 })}
               </div>
-              {moreInfo && (
-                <InfoLink question={question} parseEntities={parseEntities} />
-              )}
+              {moreInfo && <InfoLink question={currentQuestion} />}
             </div>
           );
         })}
