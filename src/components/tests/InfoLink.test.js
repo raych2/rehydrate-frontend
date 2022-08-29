@@ -12,16 +12,10 @@ const mockQuestion = {
   ],
   infoUrl: 'https:&#x2F;&#x2F;www.google.com&#x2F;',
 };
-const parseEntities = jest.fn();
 
 describe('InfoLink component', () => {
   test('renders correctly', () => {
-    render(<InfoLink question={mockQuestion} parseEntities={parseEntities} />);
+    render(<InfoLink question={mockQuestion} />);
     expect(screen.getByText(/more info/i)).toBeInTheDocument();
-  });
-  test('infoUrl is parsed with parseEntities', () => {
-    render(<InfoLink question={mockQuestion} parseEntities={parseEntities} />);
-    expect(parseEntities).toHaveBeenCalledWith(mockQuestion.infoUrl);
-    expect(parseEntities).toHaveBeenCalledTimes(2);
   });
 });
