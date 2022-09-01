@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/rehydrate-frontend/static/css/main.cc2d3675.css",
-    "main.js": "/rehydrate-frontend/static/js/main.db5e9b21.js",
+    "main.js": "/rehydrate-frontend/static/js/main.04607e59.js",
     "static/media/Water_Drop_Small.png": "/rehydrate-frontend/static/media/Water_Drop_Small.62706afebf505d48d8a0.png",
     "static/media/Stats_small.png": "/rehydrate-frontend/static/media/Stats_small.d553bbbe734070dd888b.png",
     "static/media/shopping_cart_small.png": "/rehydrate-frontend/static/media/shopping_cart_small.642651e68ed53c1593e6.png",
     "index.html": "/rehydrate-frontend/index.html",
     "main.cc2d3675.css.map": "/rehydrate-frontend/static/css/main.cc2d3675.css.map",
-    "main.db5e9b21.js.map": "/rehydrate-frontend/static/js/main.db5e9b21.js.map"
+    "main.04607e59.js.map": "/rehydrate-frontend/static/js/main.04607e59.js.map"
   },
   "entrypoints": [
     "static/css/main.cc2d3675.css",
-    "static/js/main.db5e9b21.js"
+    "static/js/main.04607e59.js"
   ]
 }
